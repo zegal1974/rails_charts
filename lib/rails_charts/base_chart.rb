@@ -39,6 +39,7 @@ module RailsCharts
 
       %Q{
         <div id="#{container_id}" class="#{klass}" style="#{style_css.compact.join('; ')}">
+        </div>
           <script>
             if (!window.RailsCharts) {
               window.RailsCharts = {}
@@ -77,7 +78,6 @@ module RailsCharts
             document.addEventListener("turbolinks:before-render", destroy_#{chart_id});
             document.addEventListener("turbo:before-render", destroy_#{chart_id});
           </script>
-        </div>
       }
     end
 
